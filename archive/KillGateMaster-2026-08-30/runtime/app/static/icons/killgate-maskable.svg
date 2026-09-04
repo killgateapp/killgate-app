@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Killgate maskable mark</title>
+  <rect width="64" height="64" fill="#0b1020"/>
+  <defs>
+    <linearGradient id="kg-field" x1="12" y1="54" x2="52" y2="10" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1d4ed8"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+  <rect x="12" y="12" width="40" height="40" rx="10" fill="url(#kg-field)"/>
+  <g fill="#e2e8f0">
+    <rect x="20" y="18" width="3.6" height="28" rx="1"/>
+    <rect x="30.2" y="18" width="3.6" height="28" rx="1"/>
+    <rect x="40.4" y="18" width="3.6" height="28" rx="1"/>
+    <rect x="20" y="18" width="24" height="3.2" rx="1"/>
+    <rect x="20" y="42.8" width="24" height="3.2" rx="1"/>
+  </g>
+  <path d="M26 24.2h4.6L35.4 32 30.6 39.8H26L30.8 32z" fill="#0b1020"/>
+</svg>

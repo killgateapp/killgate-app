@@ -1,0 +1,41 @@
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+*service-account*.json
+credentials*.json
+google-services.json
+
+# Python environments, caches, and test output
+.venv/
+venv/
+**/__pycache__/
+*.py[cod]
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/.coverage
+htmlcov/
+
+# Build and release output
+dist/
+build/
+android-release/
+android-qa-artifacts/
+artifacts/
+.android-sdk-shim/
+*.apk
+*.aab
+
+# Local databases and tool state
+*.db
+*.sqlite
+*.sqlite3
+.cache/
+**/.temp/

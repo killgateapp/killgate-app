@@ -1,0 +1,40 @@
+{
+  "packageId": "REPLACE_WITH_FINAL_ANDROID_PACKAGE_ID",
+  "host": "REPLACE_WITH_PRODUCTION_HOST",
+  "name": "Killgate",
+  "launcherName": "Killgate",
+  "display": "standalone",
+  "themeColor": "#111827",
+  "themeColorDark": "#090b11",
+  "navigationColor": "#090b11",
+  "navigationColorDark": "#090b11",
+  "navigationDividerColor": "#00000000",
+  "navigationDividerColorDark": "#00000000",
+  "backgroundColor": "#090b11",
+  "enableNotifications": true,
+  "startUrl": "/?source=twa",
+  "iconUrl": "https://REPLACE_WITH_PRODUCTION_HOST/static/icons/killgate-512.png",
+  "maskableIconUrl": "https://REPLACE_WITH_PRODUCTION_HOST/static/icons/killgate-maskable-512.png",
+  "splashScreenFadeOutDuration": 300,
+  "signingKey": {
+    "path": "REPLACE_WITH_UPLOAD_SIGNING_KEY_PATH",
+    "alias": "REPLACE_WITH_UPLOAD_SIGNING_KEY_ALIAS"
+  },
+  "appVersionCode": 1,
+  "appVersion": "1.0.0",
+  "generatorApp": "bubblewrap-cli",
+  "webManifestUrl": "https://REPLACE_WITH_PRODUCTION_HOST/manifest.webmanifest",
+  "fallbackType": "customtabs",
+  "features": {
+    "playBilling": {"enabled": true}
+  },
+  "alphaDependencies": {"enabled": true},
+  "enableSiteSettingsShortcut": true,
+  "orientation": "any",
+  "fingerprints": [
+    {
+      "name": "Play App Signing",
+      "value": "REPLACE_WITH_PLAY_APP_SIGNING_SHA256"
+    }
+  ]
+}

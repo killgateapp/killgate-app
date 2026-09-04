@@ -1,0 +1,9 @@
+HISTORICAL HANDOFF: superseded by RELEASE_HARDENING_20260830.md and the generated
+release-generated/verification-20260830.json artifact. The original record follows.
+
+Killgate Codex working handoff
+Snapshot date: 2026-08-24
+Authoritative continuation source: this directory
+Verification immediately before packaging: 146/146 pytest tests passed
+Read CODEX_CONTINUE.md first.
+No production secrets or signing material are intentionally included.

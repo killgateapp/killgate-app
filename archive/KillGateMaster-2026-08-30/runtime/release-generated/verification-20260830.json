@@ -1,0 +1,381 @@
+{
+  "generated_at_utc": "2026-08-30T23:12:24.500440+00:00",
+  "scope": "local source and disposable database checks only",
+  "production_deployed": false,
+  "live_provider_flow_verified": false,
+  "python": "3.13.13",
+  "dependencies": {
+    "fastapi": "0.141.1",
+    "starlette": "1.6.0",
+    "httpx": "0.28.1",
+    "pytest": "9.1.1"
+  },
+  "catalog_entitlements": [
+    {
+      "kind": "venture_pass",
+      "wallet_credits": 0,
+      "venture_passes": 1,
+      "credits_per_pass": 3
+    },
+    {
+      "kind": "evidence_run",
+      "wallet_credits": 0,
+      "venture_passes": 1,
+      "credits_per_pass": 1
+    },
+    {
+      "kind": "subscription",
+      "wallet_credits": 9,
+      "venture_passes": 0,
+      "credits_per_pass": 0
+    },
+    {
+      "kind": "founder_topup",
+      "wallet_credits": 3,
+      "venture_passes": 0,
+      "credits_per_pass": 0
+    }
+  ],
+  "checks": [
+    {
+      "name": "pytest",
+      "passed": true,
+      "exit_code": 0,
+      "seconds": 8.33,
+      "output": "........................................................................ [ 30%]\n........................................................................ [ 61%]\n........................................................................ [ 91%]\n...................                                                      [100%]\n============================== warnings summary ===============================\n.venv\\Lib\\site-packages\\fastapi\\testclient.py:1\n  C:\\Users\\patri\\OneDrive\\Desktop\\Killgate-master-20260830\\runtime\\.venv\\Lib\\site-packages\\fastapi\\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n    from starlette.testclient import TestClient as TestClient  # noqa\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n235 passed, 1 warning in 7.63s"
+    },
+    {
+      "name": "ruff",
+      "passed": true,
+      "exit_code": 0,
+      "seconds": 0.13,
+      "output": "All checks passed!"
+    },
+    {
+      "name": "compileall",
+      "passed": true,
+      "exit_code": 0,
+      "seconds": 0.14,
+      "output": ""
+    },
+    {
+      "name": "javascript",
+      "passed": true,
+      "exit_code": 0,
+      "seconds": 0.05,
+      "output": ""
+    },
+    {
+      "name": "postgres_test_syntax",
+      "passed": true,
+      "exit_code": 0,
+      "seconds": 0.05,
+      "output": ""
+    },
+    {
+      "name": "pip_check",
+      "passed": true,
+      "exit_code": 0,
+      "seconds": 0.68,
+      "output": "No broken requirements found."
+    },
+    {
+      "name": "dependency_audit",
+      "passed": true,
+      "exit_code": 0,
+      "seconds": 1.27,
+      "output": "No known vulnerabilities found"
+    },
+    {
+      "name": "bandit_medium_high",
+      "passed": true,
+      "exit_code": 0,
+      "seconds": 1.4,
+      "output": ""
+    },
+    {
+      "name": "postgres_transactions",
+      "passed": true,
+      "exit_code": 0,
+      "seconds": 0.89,
+      "output": "PASS all migration SQL executed\nPASS concurrent and lost-response debit retries charge once\nPASS operation IDs are bound to one user and family\nPASS refund once and cancellation before delayed debit\nPASS ten simultaneous debit/cancel races leave zero net charge\nPASS quota retries, caps and cancellation tombstones\nPASS stale entitlement and accepted-then-replaced refill are rejected\nPASS refund from an older subscription period becomes a wallet credit\nPASS concurrent creation admits only the third live root\nPASS concurrent unarchive admits only the remaining live root\nPASS pivot children use no new slot and direct writes cannot bypass the invariant\nPASS abandoned-worker recovery fences late saves and preserves delivered results\nPASS customer RPC denial and private implementation denial\nPostgreSQL release checks: 13 passed"
+    },
+    {
+      "name": "targeted_secret_patterns",
+      "passed": true,
+      "matched_paths": []
+    }
+  ],
+  "source_sha256": {
+    "app/__init__.py": "490e8027ea97004c25c6b2e552e1c5005349724ba350bf95eb7c44e67a680304",
+    "app/agents/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "app/graphs/__init__.py": "50dc6de167d178856501bfe0fe9b90595debfbc75dfc382b3418a8cec21557a5",
+    "app/main.py": "79d7af5fbefbc3264787e62c1563ee3647256db1d6fa678375ad4e0bf64f42c9",
+    "app/models/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "app/models/state.py": "9f3318e898e3f6d64c10d0eed61a0d5f848704e994160a8509143fe98add0bec",
+    "app/observability.py": "41bf5ee27c083f88ff8802f78a652a8b5616516d03eadd6b8ebed60bbfb45805",
+    "app/prompts/02_validation.md": "6fd52d21361974b2ee99b6e69355439dc09df708b6b661b4d2ea5dcb222b4154",
+    "app/prompts/ONLINE_RESEARCH_PROTOCOL.md": "05e2c81b3a7555c7f2f4f869d55d111e6ac482ade2c27189c28982b99623ebbb",
+    "app/prompts/RESEARCH_SCORECARD.md": "b498d0c9e88d50f740c2efbc8e2c7fb324d938c77ec07f74f62e9a6ec5b1d8ed",
+    "app/prompts/VALIDATION_CONTRACT_PROTOCOL.md": "1f69b5503c7bcd07dab81d81a263a7bcaa546b4cc1cf9b5bdf1a7404ff0b0f34",
+    "app/services/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "app/services/audit_trail.py": "5235beb3d699e0342aaf973d534a29d567c2ffe6848ffde7ea056304f55cfa78",
+    "app/services/auth.py": "49a1b9e90298bee65fea25fdd3170e5fbfb73836a0227dfdf1bed21fa3a03d9b",
+    "app/services/catalog.py": "d35b29398640f772ce77101efea7b9b5c59dc6d963f11f28410bc0eb112a4cf1",
+    "app/services/google_play.py": "3d71131e92e9c7e306ac8af5e5e3740e19b8b63f5e56d8885ce12f067ac91db7",
+    "app/services/live_search.py": "c38d96dfa7af02605d7a6be0a5fd7406c4ea660ae6b14013f222eee908f0e639",
+    "app/services/packet.py": "a8752b994ad6ea8d071477a198e5db3bbe731fcd2e9b67e78a21e3b0d2db4754",
+    "app/services/rate_limit.py": "415735fa12e2797e38e961e9521f9173968d91cdfcad61ad075bfbd0cc3bd1a5",
+    "app/services/readiness.py": "dd01aee12bc6414dd359e82c4ced379589d84b0ced7960e000153ab6548671f8",
+    "app/services/reality_check.py": "feb9cdd3d5942f08f7399270cd5824d248faa70dd851a36b1c2fbde277ffd8ef",
+    "app/services/research.py": "4deef6cc0c4f04ea87512d8e23552e6924362e622e0d1c149dc730ce5846654d",
+    "app/services/research_brief.py": "800a3cbe5d7e564e29320afd6e358525c42b522112cbf3b2e9c06d58b6e407f5",
+    "app/services/research_policy.py": "2b27b97fcfa84d63f49866926d9775f032d6c85867893750e2c201267e004457",
+    "app/services/slots.py": "2ee8989dd0454b53037d6ba2eee457f6a937cf9cc114acf49b780c1b35d620b6",
+    "app/services/state_store.py": "4b38463fbe925b0b8f83846a009d955c789633bef8c12b3116867a373d0895a6",
+    "app/services/validation_contract.py": "a8a52ebc88d0d2d006452def6c5af8f18e17163537e5311ccc91e677ac650b34",
+    "app/services/validation_gate.py": "156f6569c0f96adfacdfa470393bf3a93d7d3576f2c9e8e93bf00e428b6888d8",
+    "app/services/wallet.py": "3a21695817b4101ecb5b4999e9fe19809ecfe14c16f88dc0589a87cd449e2161",
+    "app/static/app.css": "2eadff0bd91517fc363e419f49ccd138bb76aeed669a01e422fd07b0f5168f50",
+    "app/static/app.js": "e817ab028f927e3ad7fa3a439ed0ba212694efc2e3f94a43011a8bda7a791d16",
+    "app/static/brand/brief-document.jpg": "4644908437c1e875adc6b3e44ac57e2f923f42107793c1419e2694292ce930b2",
+    "app/static/brand/empty-arena.jpg": "6e92b926d2cba883ad1fe9ef07c3a2924d6a7a1ffb28f7714bb181da9863a1ec",
+    "app/static/brand/gate-go.jpg": "ba1a4ba2270e23a0f22d35d1687d79df622895cb7a810f3829d9f5c48e88b4b8",
+    "app/static/brand/gate-kill.jpg": "03403966d67a219cf51e47f10a5a35570a0a2aacf04dc9497bad801ffe29c2e6",
+    "app/static/brand/gate-pivot.jpg": "358ce3364243bb04f06380b7345782df7ed1f84ee40369d485c2070f90dd6412",
+    "app/static/brand/hero-atmosphere.jpg": "d657501356869b814ce633ac582140eddcca8f4cec878748d7a186c86add5dc7",
+    "app/static/brand/offline-room.jpg": "95e4cc5a8c9905931b2f599a146dae404e7dde813fabbaddf96d50fbe157ab98",
+    "app/static/brand/og-gate.jpg": "d1de0c5c9b33fc619e1d715ccee1b4776d6e46faab276f015ff326fc19a8b188",
+    "app/static/brand/pass-card.jpg": "db27b5ebe25726bbeecc3a567e7908c4104774c5fc0097c2816a3215f44e3138",
+    "app/static/icons/apple-touch-180.png": "ab0a55c343278c79e80dacdad4eb18c6d0e6ea3341ed6d2f85a3872d417ab36d",
+    "app/static/icons/favicon-16.png": "7891bc203713dcbd87a510ddf87889d3bb8a230c58084d59eb4006cae2111a18",
+    "app/static/icons/favicon-32.png": "945dd5de568f68b28ce535eed9e6a19264a7321df9460cd02d790e32e84e9ef9",
+    "app/static/icons/favicon.ico": "2bb34dd2872ef0409ca78e7477f091f449815428f778fe135a96abb5ad495256",
+    "app/static/icons/killgate-1024.png": "ff686c15087e86a30fee0b70284ed982983d6a7fc14841aacf11ddd9ed14d329",
+    "app/static/icons/killgate-192.png": "9247a9f27172c5856daad2113cac9b193c8106f57ca9b56a3ce0e27a5921bb4e",
+    "app/static/icons/killgate-512.png": "54658029b82785014a4b6a7a9536ce5c70c716f2a350c8cc9a94fb1901329925",
+    "app/static/icons/killgate-mark.svg": "feeb2a3acc2713f1dab6154866703a45643828e97213f8bdd2c19b047e570f9f",
+    "app/static/icons/killgate-maskable-1024.png": "270ba1a984bf8ebec83d9f230a783bc5bc31b3574ea76e27d1eed373a320be08",
+    "app/static/icons/killgate-maskable-512.png": "9d9be3663b8ab86ea69674ddae889a2870a5b91f4c2d3baa418d31c4f08d90e6",
+    "app/static/icons/killgate-maskable.svg": "a526e6396f3237df8b65a504d195def8f5c58c5629c5bf370a4ec0d06db24275",
+    "app/static/manifest.webmanifest": "5c2615b40e544a6675cf43cbc7e516cc16f645a0c77c9332dcabcb8ec7d8e82a",
+    "app/static/sample-reports/ai-gmail-validation-report.pdf": "12d7bcc01c7a2ae5355b31c73532bc412909c3187e8a9d7203e013007772ccc2",
+    "app/static/sample-reports/collision-repair-saas-validation.pdf": "0a21adfefa7517f0a882cfb7dba9f3c9760f56be07a43a32927f7b4f603fb154",
+    "app/static/sample-reports/commercial-cleaning-saas-validation-report.pdf": "179678db116d7c92f11e907a93dcbf0519908117d00560c31a89ec1ae5acc7bf",
+    "app/static/sample-reports/contract-renewal-validation.pdf": "d3aeb7582e1f8850b0aa7934ece3ae4cf37c13ba058948bce1092fb976c44b11",
+    "app/static/sample-reports/dental-no-show-validation.pdf": "a8baf92e075ef495501eb984cc8b65ab38a3c9c63be0d25ad387e5fd21f929a9",
+    "app/static/sample-reports/fire-sprinkler-validation-report.pdf": "bcc0fd2c30238e03fa420e53ab882c7ce2a9d4955bd5ec4669fa8c628aab3f03",
+    "app/static/sample-reports/mood-to-dinner-validation-report.pdf": "dc73c7f181127aa5944b0bca5a8a7ec176c866139045eeb8cfe5ad781d81cd9b",
+    "app/static/sample-reports/restaurant-scheduling-validation.pdf": "4847ee82e35e6a7ad73d51c86ee7774a50e73edfb06d37e3843eee58365aa33b",
+    "app/static/sample-reports/vehicle-audio-diagnostics-killgate-report.pdf": "e3d4135ce5152c0bb2aafd774450a59eba0ae6c72ad76b9db3d55a0e56ff49dd",
+    "app/static/screenshots/killgate-desktop.png": "d343381546725fde87bb8578dab80d9fb2433f1c555deab6a48342c155c09a0c",
+    "app/static/screenshots/killgate-desktop.svg": "e46c0e8afa007e5f37e039b589876d4a28d4f2b6358733a0472a9aa2534c2852",
+    "app/static/screenshots/killgate-mobile.png": "226da48501b8e9d8305734e3b68d8392c1581a26aadcba9dcdfc632fce8112b2",
+    "app/static/screenshots/killgate-mobile.svg": "d8fecb3cf146edb9a15a3070cb7b964e2662dc3984bbe0c37a6826b906701227",
+    "app/static/service-worker.js": "f00bd680c12897441e2bf3f8537b58384c923c8557ed551ec72cedb0a466ae24",
+    "app/web.py": "dd6f70f351afafcb7ad1881e106891733c07c165680197b690726d404728a5f2",
+    "scripts/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "scripts/android_internal_smoke.py": "3543d602cb78437ac285da52dae5e6a6b21df7416c00b78db6a3da311eb2822c",
+    "scripts/build_preview_apk.py": "cb33f6f41a1cc46e3919a05086c5931be04838dd547128e4a4ce087fc5c42849",
+    "scripts/check_production_readiness.py": "076456ae2c09b2589aa13ea65ee3d7412a794f53ca8baba53be20c119ef5c251",
+    "scripts/check_release_postgres.cjs": "e18a4b356bd5fedd9dfb66e786196c6f1b87d194692f5ed6087a3b54463873ef",
+    "scripts/check_supabase_schema.py": "b3662e8889a7ef19f9a4de8ecdfad0d5a8072eaa9e339dc7f360a9b9c290cb7e",
+    "scripts/render_play_release.py": "0fc0dd7f864ad72c9a5ec44ee55efd3f6f177efd34c59c931a5c9177374a0633",
+    "scripts/verify_release.py": "3112f6d78470ccc7da72dc517753cd96c25ff2e453fc7ef4476a6735f5b5271b",
+    "tests/test_accounts_billing.py": "90793381a4e611f440b6748f0e00bcda606d6f7fd45739ee97688491ffbb457e",
+    "tests/test_auth.py": "a60171eeea7e05857a36fcc02a6beca26c1bd296c242221df7353905b8c714b5",
+    "tests/test_brand_assets.py": "44d7171843b68aa1c2adc6b7e85dac01a8bb7a257228eb01777fc45edfb30055",
+    "tests/test_monetization.py": "6f306c6196494b82f24889cbc7827386189e935f1e50ceddaf101c9039c4f2af",
+    "tests/test_observability.py": "6a2ffb6433536205ff84feb9963b39f7be8864eb39e4711788b53d91ddfcce7e",
+    "tests/test_preview_apk.py": "57fa805c99cf70dc95875d2385c4fa525834800361eb80c728c9ebcb31844cc3",
+    "tests/test_pwa.py": "b717552a281eac11a9b7fcf4f81c44f4b447ef06cc6153f9259e587d8ea6fcd5",
+    "tests/test_rate_limit.py": "f62bf11ad5266d22d5a437e5c7e0449d9629c07194c8ecb57c2115d82ecb88b8",
+    "tests/test_readiness.py": "d3025f1572f38878d91d836f3fa333c3ea0af61d186e6b2f1385c1e55fc8d582",
+    "tests/test_release_correctness.py": "3eac4a279eef3842f1722dc16acad918585b81631fd336fcd2ebbe39d3dba437",
+    "tests/test_release_tools.py": "db2beb1137dc4dc13b5924a3a69761f8b885b649779373fb012658b82f2147b8",
+    "tests/test_research_policy.py": "feb9ce9c2d292526d0d55923ad61e7640d66502205e46fa051ae10dabf126ade",
+    "tests/test_research_relevance.py": "85f720a338252274f9ed6aa408ed56309cb17795017ca4b1bd9c04af311773a0",
+    "tests/test_slots_and_catalog.py": "0518a46272841c49b7b48ce851a9b30afc90ccaf48e57c3c70bfed19ea44f2c0",
+    "tests/test_state_store_concurrency.py": "f6abf43477c0d92e8efcaa0c7d8c89118ae2fe523014b7c111bcec35209af6e9",
+    "tests/test_supabase_schema_check.py": "2bb3f823f10c5454a422684368bea28f06dc41202b3b9ebfb4caec230880f509",
+    "tests/test_validation_contract.py": "388c4cf9fc2cb2be3c65e12974e307ce2aa147143650bf11b20990db2e36cdb7",
+    "supabase/functions/delete-killgate-account/index.ts": "6923e7a6742107828c72051fcef23e58e226f2955601a5328856f410864b6919",
+    "supabase/migrations/20260824_killgate_atomic_play_entitlement.sql": "79a6e7ed5e4776eac3cb44ec6ce9b0f479aa0b008887a54eaed051f5ca4b3da7",
+    "supabase/migrations/20260824_killgate_distributed_rate_limits.sql": "6fe62837878a78d202b4a38b89acccdafc61b5798948c22ad7f2c7391e0e439c",
+    "supabase/migrations/20260824_killgate_ordered_play_entitlement.sql": "02a87c2fb4269098dfe76ed981a20cb4a6df4f44e46e25fb6067b40689e8da34",
+    "supabase/migrations/20260824_killgate_play_rtdn_events.sql": "5addaaa2a37c40d36db0313eca8e8fddea7351e95e545253e7859c89889550a7",
+    "supabase/migrations/20260824_killgate_play_token_history.sql": "6faf36f00aba3a58f7ca732b74d368672c92e4b28281b6910bed9f11dc4a75cb",
+    "supabase/migrations/20260824_killgate_pre_auth_rate_limits.sql": "a360dd04f506b94a592ab177c4d402d4dc1c8df543093bfeb134ec8c0ac833d9",
+    "supabase/migrations/20260824_killgate_research_quota.sql": "2d83eadebfb43e25bfa4b20657f194b0c2e62e28303b8617300a1b4f72f8c39f",
+    "supabase/migrations/20260824_killgate_research_quota_reservations.sql": "131e54960b22e994c9696d9d5e8d941c6dfd5dfe28f3c3925cb57647a55919bf",
+    "supabase/migrations/20260824_killgate_single_user_accounts.sql": "90443ff2776f6a7e956683fae2ec7bd306fedf5a57e5faafe5c54b0b16d6345a",
+    "supabase/migrations/20260824_killgate_venture_revisions.sql": "6d8f559b544d8e6ac40e12f4f8f1b68790b81ae3004e93a040c8235cc68328a5",
+    "supabase/migrations/20260828_killgate_credits_and_passes.sql": "b2b8fe4287d4b52de2353d0a66eae1fc10ced965d3b4f01d3790d1b3c48bc4a4",
+    "supabase/migrations/20260828_killgate_founder_pro_wallet_rpc.sql": "6665850d48c2436cb473449de92810203a459b27cf564a4a617a69bc225e1989",
+    "supabase/migrations/20260828_killgate_research_quota_windows.sql": "f7a894ae6a3973990d776cbc76c2bb571c0c8b5d19d1771f9b95b05c1fd29bd9",
+    "supabase/migrations/20260830224035_release_correctness.sql": "4fa7907b22a7a49e9cf47fb84b4db9b175da33f2af1d6c1ae0a0e21946fc9eb9",
+    ".github/workflows/release-ci.yml": "f4ac25cb28641b5652b5fd769a75f9ba065e887117808f49519fe21304b9d2f1",
+    ".dockerignore": "e9c2e00ae8c94ac0025dc987a8408ebedefc63afce5f33c8cb39451ede522719",
+    ".env.example": "79205b9198419d1ef1c9655c75131760b44ba272bf9de4890ead1d12ae7c17f1",
+    ".gitignore": "16b7ec8caeb15c8f11d07a214333c9c8df70ba999c79bf560780128dda3e5dc3",
+    "ANDROID_QA_CHECKLIST.md": "c31c9d58f836146ab5801c0ce3b707d3d18b2205a7ecf5df1ebf7b1fc3bf2afd",
+    "CHANGELOG.md": "ad863a9407e28ad6505d2c4238c5ad87b71472604d9971ce9ba8d7787d6843d8",
+    "CLOUD_RUN_DEPLOYMENT.md": "79082879ad89e83a4260fd67c57d9c5721cf08ec06bf5241b895d02728c8d134",
+    "CODEX_CONTINUE.md": "366b1708551949462edc57a5c463933844176468a4edf34e3ae6c700e14ab5d8",
+    "CODEX_PROGRESS.md": "b9736107b45c476f18180316c06702f4f75dd952547644e25930c4e3fe4664a7",
+    "Dockerfile": "310b9f82cb29e0912e400950f0d713f276d3693e04cf9d9b84f2de8abb085cc8",
+    "GOOGLE_PLAY_RTDN_SETUP.md": "a2b6ef072a66f599edf54caafb57e6c104fdbf482428251dc201c09e799cd8bf",
+    "HANDOFF_SNAPSHOT.txt": "698732594059431335812d36f2b053e40c60121c1094bba2664f5784acbaa29a",
+    "MERGE_NOTES_V1.5.md": "b9f6b6e265d34e6b4c1252c8f24e52b4f1b41f13371288c84f7c070190276cbe",
+    "PLAY_CONSOLE_CATALOG.md": "8a8aa97db7c154d6708db3b7d5284e6dcccd846c3a089728f5f3b1d4b270978c",
+    "PLAY_STORE_RELEASE_CHECKLIST.md": "aaf1eea6d4664b52a451136e50cc0b466ccf501257379d0bebd5b6a48f63868c",
+    "PRICING_AND_UNIT_ECONOMICS.md": "382360f899c383bdf880e0052aa859a43f61170158d3c3ce6024c8273443fdbe",
+    "pytest.ini": "e621dabb0551d82e234c399c39d035481d1b20a1ccbeb7a3ade640fc9dd1a151",
+    "README.md": "410f6c06fac32eb22914cd70af0f92287cfff38efdb2c52c288040f4926665ef",
+    "RELEASE_HARDENING_20260830.md": "474a6adf96df9b698b37d3b377562e1be06d129b66e97e1583963902f6092b3d",
+    "RELEASE_NOTES_V1.2.0.md": "7fb5f46d00451e77a72baac34b7f0c48cabc8c5de1e780373a0fd19228e26c9c",
+    "requirements-dev.lock": "ee1a96de54341d13b4f6b17d1c88902f1113214b343d091dd3a24e8dea4ccf1e",
+    "requirements-dev.txt": "cd3a874d56a54e207f3b353625baddd3632898c8b85367511c3ea20cbe5a2f41",
+    "requirements.lock": "36d7c1e6b42ada88ae0f00689b4416fd23a29fa3213058537b1634bb7e450a3b",
+    "requirements.txt": "ab41593e7b0f7c4acc881c6f439662db0867d1a2d9de118978f03a97e34c4af5",
+    "SECURITY_DEPLOYMENT_CHECKLIST.md": "a3cd2d3df7cf3bdc8e7c2e530c322dad5236b5f4902b23d48a4a2c89d3f7255a",
+    "SECURITY_REVIEW_RELEASE_CANDIDATE.md": "efe0d8ae0257c8e88a96dcab2a001be23411016a679962b2a647f0c88e59b359",
+    "VERIFICATION.txt": "e5051c9646d7e7197e1ad48483c84a71c546d28837e8b851f010e06e32e87db4"
+  },
+  "changed_from_baseline": [
+    {
+      "path": "app/models/state.py",
+      "before_sha256": "6d0e3f46930d381b694587449300bfe71d34d1aad2bad46e154fc9625de9cfc1",
+      "after_sha256": "9f3318e898e3f6d64c10d0eed61a0d5f848704e994160a8509143fe98add0bec"
+    },
+    {
+      "path": "app/services/audit_trail.py",
+      "before_sha256": "d73ccf0534957b141d743f8d64e2a97218f94d1191f53266a1d9e2d02ae2d5d1",
+      "after_sha256": "5235beb3d699e0342aaf973d534a29d567c2ffe6848ffde7ea056304f55cfa78"
+    },
+    {
+      "path": "app/services/catalog.py",
+      "before_sha256": "82cc8969700b78817aae37665bb5551c37dffe13150ddae9d43ec579e2c7ea45",
+      "after_sha256": "d35b29398640f772ce77101efea7b9b5c59dc6d963f11f28410bc0eb112a4cf1"
+    },
+    {
+      "path": "app/services/packet.py",
+      "before_sha256": "cc9bcd70a6580f240c2827a324b1703c2413bd455236f50a985f77a83a06006f",
+      "after_sha256": "a8752b994ad6ea8d071477a198e5db3bbe731fcd2e9b67e78a21e3b0d2db4754"
+    },
+    {
+      "path": "app/services/rate_limit.py",
+      "before_sha256": "c467b510923495a473b5a22d281625235c8bb2feff3c1b6f82abc9e2c7953fca",
+      "after_sha256": "415735fa12e2797e38e961e9521f9173968d91cdfcad61ad075bfbd0cc3bd1a5"
+    },
+    {
+      "path": "app/services/state_store.py",
+      "before_sha256": "d5eb1dfa402d8426ab8130688b53bfb1cccfe359fdf68553fea206d5552dbc5f",
+      "after_sha256": "4b38463fbe925b0b8f83846a009d955c789633bef8c12b3116867a373d0895a6"
+    },
+    {
+      "path": "app/services/wallet.py",
+      "before_sha256": "2bc7cf46bc24a8b1faa2696ce744e7232bc1edd31a58363cb7ae47a0222bbea8",
+      "after_sha256": "3a21695817b4101ecb5b4999e9fe19809ecfe14c16f88dc0589a87cd449e2161"
+    },
+    {
+      "path": "app/web.py",
+      "before_sha256": "9ad73bc89085059c36d0e11310ee499f1199fcc27e7d5af676e7cbf92dc833d9",
+      "after_sha256": "dd6f70f351afafcb7ad1881e106891733c07c165680197b690726d404728a5f2"
+    },
+    {
+      "path": "scripts/check_release_postgres.cjs",
+      "before_sha256": null,
+      "after_sha256": "e18a4b356bd5fedd9dfb66e786196c6f1b87d194692f5ed6087a3b54463873ef"
+    },
+    {
+      "path": "scripts/check_supabase_schema.py",
+      "before_sha256": "ddc42c35de2936715cf4a4bfd90ffa226500ade9f8ac6718579a2998dfff72cc",
+      "after_sha256": "b3662e8889a7ef19f9a4de8ecdfad0d5a8072eaa9e339dc7f360a9b9c290cb7e"
+    },
+    {
+      "path": "scripts/verify_release.py",
+      "before_sha256": null,
+      "after_sha256": "3112f6d78470ccc7da72dc517753cd96c25ff2e453fc7ef4476a6735f5b5271b"
+    },
+    {
+      "path": "tests/test_accounts_billing.py",
+      "before_sha256": "a54aa94509de76a45782e51558ab3944989bfd1d1492d00559c985ea41149419",
+      "after_sha256": "90793381a4e611f440b6748f0e00bcda606d6f7fd45739ee97688491ffbb457e"
+    },
+    {
+      "path": "tests/test_rate_limit.py",
+      "before_sha256": "e55550bcc5ef561cd767418f5e9640cc33092e66461a87938d0305e169d6d203",
+      "after_sha256": "f62bf11ad5266d22d5a437e5c7e0449d9629c07194c8ecb57c2115d82ecb88b8"
+    },
+    {
+      "path": "tests/test_release_correctness.py",
+      "before_sha256": null,
+      "after_sha256": "3eac4a279eef3842f1722dc16acad918585b81631fd336fcd2ebbe39d3dba437"
+    },
+    {
+      "path": "tests/test_supabase_schema_check.py",
+      "before_sha256": "ca2326bf41d45ff15af31db0df2b41352f84c070bcca9c500b0b5427f6da2bed",
+      "after_sha256": "2bb3f823f10c5454a422684368bea28f06dc41202b3b9ebfb4caec230880f509"
+    },
+    {
+      "path": "tests/test_validation_contract.py",
+      "before_sha256": "f95a2861ec141e6daaf4753ead482e9e77b7e9892e46c1622dc633898ed51a8d",
+      "after_sha256": "388c4cf9fc2cb2be3c65e12974e307ce2aa147143650bf11b20990db2e36cdb7"
+    },
+    {
+      "path": "supabase/migrations/20260830224035_release_correctness.sql",
+      "before_sha256": null,
+      "after_sha256": "4fa7907b22a7a49e9cf47fb84b4db9b175da33f2af1d6c1ae0a0e21946fc9eb9"
+    },
+    {
+      "path": ".github/workflows/release-ci.yml",
+      "before_sha256": "2db64030a35905b080c3d8fba824ef974c02b20f42708527374cf410e88af0a0",
+      "after_sha256": "f4ac25cb28641b5652b5fd769a75f9ba065e887117808f49519fe21304b9d2f1"
+    },
+    {
+      "path": ".env.example",
+      "before_sha256": "7f6de82cabc49ea7b33968e0bb2c3b5feb8b299b724f810ca1077191de8bf6ec",
+      "after_sha256": "79205b9198419d1ef1c9655c75131760b44ba272bf9de4890ead1d12ae7c17f1"
+    },
+    {
+      "path": "CODEX_CONTINUE.md",
+      "before_sha256": "e4e4fdd05ee347e9dcfc9842f47fe24d89c7c88f5632f4658a775348efd7ff10",
+      "after_sha256": "366b1708551949462edc57a5c463933844176468a4edf34e3ae6c700e14ab5d8"
+    },
+    {
+      "path": "HANDOFF_SNAPSHOT.txt",
+      "before_sha256": "c25f16ac75996381d6eef72eeca541bf5a0df242b97cbcb86b7b0fb7796dbc0f",
+      "after_sha256": "698732594059431335812d36f2b053e40c60121c1094bba2664f5784acbaa29a"
+    },
+    {
+      "path": "README.md",
+      "before_sha256": "e0a089bcfd03bda8b1f636afe6d1a4eb07bf6cd202ad2d264c29ab6998fd6f62",
+      "after_sha256": "410f6c06fac32eb22914cd70af0f92287cfff38efdb2c52c288040f4926665ef"
+    },
+    {
+      "path": "RELEASE_HARDENING_20260830.md",
+      "before_sha256": null,
+      "after_sha256": "474a6adf96df9b698b37d3b377562e1be06d129b66e97e1583963902f6092b3d"
+    },
+    {
+      "path": "RELEASE_NOTES_V1.2.0.md",
+      "before_sha256": "2d365ef0163fe4a507761249342c102070ef35b916dc09fc209c6547163f44df",
+      "after_sha256": "7fb5f46d00451e77a72baac34b7f0c48cabc8c5de1e780373a0fd19228e26c9c"
+    },
+    {
+      "path": "VERIFICATION.txt",
+      "before_sha256": "a3ef27fb9a104900d479b613fed56df6dfb902e95f972939f174788ca825b425",
+      "after_sha256": "e5051c9646d7e7197e1ad48483c84a71c546d28837e8b851f010e06e32e87db4"
+    }
+  ],
+  "pytest_counts": {
+    "tests": 235,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "passed": true,
+  "postgres_requested": true,
+  "known_follow_up": "Pinned Starlette 1.6.0 warns about HTTPX TestClient compatibility. Track separately; no dependency upgrade or warning suppression in this patch."
+}

@@ -1,0 +1,126 @@
+{
+  "id": "/",
+  "name": "Killgate — Venture Gate Engine",
+  "short_name": "Killgate",
+  "description": "Test whether an idea deserves your time and money before you build it.",
+  "lang": "en-US",
+  "dir": "ltr",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": [
+    "window-controls-overlay",
+    "standalone"
+  ],
+  "orientation": "any",
+  "background_color": "#050914",
+  "theme_color": "#050914",
+  "categories": [
+    "business",
+    "productivity",
+    "utilities"
+  ],
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "/static/icons/killgate-store-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/static/icons/killgate-store-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/static/icons/killgate-store-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/static/screenshots/killgate-mobile.png",
+      "sizes": "720x1280",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Start a blunt, evidence-driven idea validation",
+      "description": "Start a blunt, evidence-driven idea validation"
+    },
+    {
+      "src": "/static/screenshots/killgate-desktop.png",
+      "sizes": "1440x900",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Review ideas and validation status in the Killgate pipeline",
+      "description": "Review ideas and validation status in the Killgate pipeline"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Test a new idea",
+      "short_name": "New idea",
+      "description": "Open the Killgate idea intake",
+      "url": "/#new-idea",
+      "icons": [
+        {
+          "src": "/static/icons/killgate-store-512.png",
+          "sizes": "512x512",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Review idea pipeline",
+      "short_name": "Your ideas",
+      "description": "Review active and killed ideas",
+      "url": "/#ideas",
+      "icons": [
+        {
+          "src": "/static/icons/killgate-store-512.png",
+          "sizes": "512x512",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "application/x-www-form-urlencoded",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  },
+  "file_handlers": [
+    {
+      "action": "/?source=file#new-idea",
+      "accept": {
+        "text/plain": [
+          ".txt"
+        ],
+        "text/markdown": [
+          ".md",
+          ".markdown"
+        ]
+      }
+    }
+  ],
+  "protocol_handlers": [
+    {
+      "protocol": "web+killgate",
+      "url": "/?protocol=%s#new-idea"
+    }
+  ],
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  },
+  "edge_side_panel": {
+    "preferred_width": 420
+  }
+}

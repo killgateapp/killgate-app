@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1280" viewBox="0 0 720 1280">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="720" y2="1280" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#231346"/>
+      <stop offset=".33" stop-color="#090b11"/>
+      <stop offset="1" stop-color="#090b11"/>
+    </linearGradient>
+    <linearGradient id="button" x1="92" y1="0" x2="625" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#2563eb"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="20" stdDeviation="24" flood-color="#000" flood-opacity=".32"/>
+    </filter>
+  </defs>
+  <rect width="720" height="1280" fill="url(#bg)"/>
+  <rect width="720" height="92" fill="#090b11" fill-opacity=".84"/>
+  <path d="M47 74V48c0-19 14-33 33-33s33 14 33 33v26H98V49c0-11-7-20-18-20s-18 9-18 20v25z" fill="#8b5cf6"/>
+  <circle cx="80" cy="57" r="18" fill="#fff"/>
+  <circle cx="73" cy="56" r="2.6" fill="#111827"/>
+  <circle cx="87" cy="56" r="2.6" fill="#111827"/>
+  <text x="132" y="47" fill="#f7f8fb" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="700">Killgate</text>
+  <text x="132" y="69" fill="#9ca6b8" font-family="DejaVu Sans, sans-serif" font-size="11" letter-spacing="2">VENTURE GATE ENGINE</text>
+
+  <text x="48" y="151" fill="#a78bfa" font-family="DejaVu Sans, sans-serif" font-size="13" font-weight="700" letter-spacing="3">CUSTOMER ZERO VALIDATION</text>
+  <text x="48" y="213" fill="#f7f8fb" font-family="DejaVu Sans, sans-serif" font-size="46" font-weight="700">Find out whether your</text>
+  <text x="48" y="266" fill="#f7f8fb" font-family="DejaVu Sans, sans-serif" font-size="46" font-weight="700">idea deserves to live.</text>
+  <text x="48" y="316" fill="#b5bfd1" font-family="DejaVu Sans, sans-serif" font-size="19">Get a blunt, evidence-driven verdict before you spend</text>
+  <text x="48" y="346" fill="#b5bfd1" font-family="DejaVu Sans, sans-serif" font-size="19">months building the wrong thing.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="36" y="397" width="648" height="514" rx="22" fill="#151a25" stroke="#30384b" stroke-width="2"/>
+  </g>
+  <rect x="62" y="429" width="49" height="49" rx="13" fill="#281b49" stroke="#6d49bf"/>
+  <text x="76" y="460" fill="#c4b5fd" font-family="DejaVu Sans, sans-serif" font-size="14" font-weight="700">01</text>
+  <text x="132" y="453" fill="#f7f8fb" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="700">Put an idea through the gate</text>
+  <text x="132" y="483" fill="#9ca6b8" font-family="DejaVu Sans, sans-serif" font-size="15">Specific customers and painful problems get better results.</text>
+  <text x="62" y="539" fill="#d8deea" font-family="DejaVu Sans, sans-serif" font-size="14" font-weight="700">Describe the customer, the problem, and what you want to sell.</text>
+  <rect x="62" y="558" width="596" height="222" rx="15" fill="#0b0e15" stroke="#3a455b" stroke-width="2"/>
+  <text x="84" y="597" fill="#d6dce8" font-family="DejaVu Sans, sans-serif" font-size="18">Independent auto shops miss calls while</text>
+  <text x="84" y="627" fill="#d6dce8" font-family="DejaVu Sans, sans-serif" font-size="18">technicians are busy. I want to sell them an AI</text>
+  <text x="84" y="657" fill="#d6dce8" font-family="DejaVu Sans, sans-serif" font-size="18">receptionist that qualifies jobs and books visits.</text>
+  <rect x="62" y="806" width="596" height="70" rx="13" fill="url(#button)"/>
+  <text x="251" y="850" fill="#fff" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700">Test this idea  →</text>
+
+  <rect x="48" y="967" width="49" height="49" rx="13" fill="#281b49" stroke="#6d49bf"/>
+  <text x="62" y="998" fill="#c4b5fd" font-family="DejaVu Sans, sans-serif" font-size="14" font-weight="700">02</text>
+  <text x="118" y="990" fill="#f7f8fb" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700">Your idea pipeline</text>
+  <text x="118" y="1022" fill="#9ca6b8" font-family="DejaVu Sans, sans-serif" font-size="15">Review the evidence, next action, or kill decision.</text>
+  <rect x="48" y="1064" width="624" height="150" rx="16" fill="#11151f" stroke="#30384b" stroke-width="2"/>
+  <text x="72" y="1103" fill="#b9c6ff" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="700">V-73F00D5C</text>
+  <rect x="491" y="1081" width="151" height="30" rx="15" fill="#3b2d08" stroke="#7a621d"/>
+  <text x="509" y="1101" fill="#fde68a" font-family="DejaVu Sans, sans-serif" font-size="12" font-weight="700">VALIDATION ACTIVE</text>
+  <text x="72" y="1150" fill="#d6dce8" font-family="DejaVu Sans, sans-serif" font-size="16">AI receptionist for independent auto shops…</text>
+  <text x="72" y="1182" fill="#9ca6b8" font-family="DejaVu Sans, sans-serif" font-size="13">Day 1</text>
+</svg>

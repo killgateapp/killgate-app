@@ -1,0 +1,21 @@
+Killgate v1.2.0 release correctness verification
+Updated: 2026-08-30
+Validation engine/contract: v1.5 (unchanged)
+
+Current evidence is generated, not a manually maintained test total:
+  release-generated/verification-20260830.json
+  Regenerate with: python scripts/verify_release.py --postgres
+  The PostgreSQL option requires the disposable localhost setup described in
+  RELEASE_HARDENING_20260830.md. Omit it for application-only checks.
+
+The generated artifact records exact test counts, warnings, command outcomes,
+dependency versions, source SHA-256 values, and catalog entitlements.
+
+The commercial source of truth is app/services/catalog.py. Founder Pro grants
+FOUNDER_PRO_MONTHLY_CREDITS (currently 9), once per accepted billing period.
+There is no unlimited research and no 30-run monthly purchased entitlement.
+
+Earlier 146-test and 181-test reports are historical snapshots, superseded by
+the generated evidence. Preserved source baseline: ../release-baseline-20260830-1839/.
+No new APK/AAB, production deployment, live migration, or live provider/billing
+flow is claimed by these local checks. See RELEASE_HARDENING_20260830.md.

@@ -1,0 +1,71 @@
+name: Killgate release CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test-and-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+          cache: pip
+      - uses: actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961 # v5
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Install Android 16/API 36 build tools
+        run: sdkmanager "platforms;android-36" "build-tools;36.0.0"
+      - name: Install runtime, test, and audit tools
+        run: pip install --require-hashes -r requirements-dev.lock
+      - name: Unit and regression tests
+        run: pytest -q --junitxml=release-generated/pytest-ci.xml
+      - name: Python syntax/bytecode check
+        run: python -m compileall -q app scripts
+      - name: Browser JavaScript syntax check
+        run: node --check app/static/app.js
+      - name: Functional Python lint
+        run: ruff check app scripts tests --select F,B
+      - name: Build and verify installable preview APK
+        run: |
+          python scripts/build_preview_apk.py --output /tmp/killgate-preview.apk
+          "$ANDROID_HOME/build-tools/36.0.0/apksigner" verify --verbose /tmp/killgate-preview.apk
+      - name: Dependency vulnerability audit
+        run: pip-audit -r requirements.lock
+      - name: Python security lint
+        run: bandit -q -ll -r app scripts -x tests
+      - name: Resolved dependency consistency
+        run: pip check
+      - name: Build production container
+        run: docker build --pull -t killgate-release-candidate .
+
+  postgres-transactions:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_HOST_AUTH_METHOD: trust
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - name: Install isolated database test driver
+        run: npm install --prefix /tmp/killgate-postgres-check --ignore-scripts --no-audit --no-fund pg@8.16.3
+      - name: Exercise actual migrations, permissions, and concurrent transactions
+        env:
+          NODE_PATH: /tmp/killgate-postgres-check/node_modules
+          KILLGATE_TEST_DATABASE_URL: postgresql://postgres@127.0.0.1:5432/postgres
+        run: node scripts/check_release_postgres.cjs
